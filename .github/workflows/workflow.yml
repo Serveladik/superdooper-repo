@@ -22,8 +22,7 @@ jobs:
     steps:
     - name: Checking env variable
       run: echo "GITHUB_ACTIONS env variable equals to ${{ env.GITHUB_ACTIONS }}"
-    - name: Checking branch name
+    - name: Checking branch and repo name
       run: echo "Name of your branch is ${{ github.ref }} and repo is ${{ github.repository }}"
-    - name: Checing env variable
-      run: echo "The job event: ${{ github.event_name }}"
-    
+    - name: Checking event variable
+      run: echo "The job event ${{ github.event_name }}"
